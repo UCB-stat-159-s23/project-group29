@@ -9,7 +9,7 @@ This project is analyzing NBA data that will then be used to build a regression 
 
 ## Project Website
 
-The website for this project can be found here [https://stat159.datahub.berkeley.edu/user/jenniferliang/proxy/8000/README.html]
+The website for this project can be found [here](https://ucb-stat-159-s23.github.io/project-group29/)
 
 ## Dataset
 
