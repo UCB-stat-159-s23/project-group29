@@ -1,0 +1,23 @@
+## Makefile to build JupyterBook
+
+.PHONY: env
+env :
+	mamba env create -f environment.yml --name project
+	bash -ic 'conda activate project;python -m ipykernel install --user --name project --display-name "IPython - project"'
+
+	
+all:
+	bash -ic 'conda activate project'
+	jupyter execute Data Collection.ipynb Data Cleaning Feature Engineering.ipynb prediction model.ipynb main.ipynb
+
+## - html    : Build static website for local display
+.PHONY: html
+html:
+	jupyter-book build .
+	
+## - clean   : remove all build files
+.PHONY: clean
+clean:
+	rm -f games/*.csv
+	rm -f games_model/*.csv
+	rm -rf _build/html/

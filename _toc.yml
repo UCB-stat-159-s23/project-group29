@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README.md
+parts:
+- caption: Main
+  chapters:
+  - file: main.ipynb
+- caption: Data Analysis
+  chapters:
+  - file: Data Collection.ipynb
+  - file: Data Cleaning Feature Engineering.ipynb
+  - file: prediction model.ipynb
