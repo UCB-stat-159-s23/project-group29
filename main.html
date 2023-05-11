@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction &#8212; NBA Basketball Predictive Analytics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Data Collection" href="Data%20Collection.html" />
     <link rel="prev" title="NBA Dataset Analysis" href="README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -399,7 +400,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>In this Jupyter Book we will explore some predictive analytics of NBA basketball. Over recent years, statistical analytics have been used increasingly in commentary across the league to highlight and quantify the feats these athletes achieve game to game and their careers overall. The ability to predict game outcomes has recently become a major topic with the expanding legalization and accessibility to sports betting in the United States. Betters have gone to the lengths of creating statistical models such as the one created in this project in hopes of optimizing and perfecting their “odds”.</p>
 <p>The goal of this project is to generate a fundamental predictive model that accurately predicts game wins based off certain features. The hope is this model is a foundational start to creating more robust and complex models that can more accurately predict real life game situations with all variables involved.</p>
 <div class="cell docutils container">
@@ -723,7 +724,7 @@ document.write(`
 </div></div></div>
 </div>
 <section id="data-description">
-<h2>Data Description<a class="headerlink" href="#data-description" title="Permalink to this headline">#</a></h2>
+<h2>Data Description<a class="headerlink" href="#data-description" title="Permalink to this heading">#</a></h2>
 <p>Now that our data is sourced we can see that for we have 28 different feature columns of data across 10328 different games. For the sake of this project, we want to use no earlier game data than the 2019-2020 NBA season up until the most recent playoff games on May 8th, 2023. This will help us maintain greater accuracy because it lowers the margin in differences of team composition and coaching staff. We used League ID ‘00’ to indicate that we are interested in only NBA games not G-League. The features and their descriptions are as follows:</p>
 <ul class="simple">
 <li><p>SEASON_ID: A league generated ID number for the season the game was played in.</p></li>
@@ -860,16 +861,17 @@ document.write(`
 </div>
 </section>
 <section id="data-collection-and-feature-engineering">
-<h2>Data Collection and Feature Engineering<a class="headerlink" href="#data-collection-and-feature-engineering" title="Permalink to this headline">#</a></h2>
+<h2>Data Collection and Feature Engineering<a class="headerlink" href="#data-collection-and-feature-engineering" title="Permalink to this heading">#</a></h2>
 <p>The data was accessed using the NBA_API tool that scrubs data from <a class="reference external" href="http://stat.nba.com">stat.nba.com</a>. The data was then cleaned down to a data frame consisting of GAME_DATE, GAME_ID, WL, MATCHUP, and the PLUS_MINUS total. We used the average plus minus value of the last 10 games to give us a value of measure for the team’s performance moving into their next game. We converted the data type on the GAME_DATE column to datetime so we would be able to sort these values from earliest date to present time. The dataset provided us rows of data for both home and away teams for single games so we merged this data on the GAME_ID and then we added a column for the average plus minus of the last 10 games of the home team and the away team. Once we had this data we then took the average plus minus of the last 10 from the home team and the away team and took the difference to account for home court advantage. We then converted the WL columns to binary 1 for win and 0 for loss to be interpreted by the model. The final dataframe we fed into the model consisted of two columns, our converted wins and losses, and our average plus minus of the last 10 games differential.</p>
 </section>
 <section id="model-building-results">
-<h2>Model Building &amp; Results<a class="headerlink" href="#model-building-results" title="Permalink to this headline">#</a></h2>
+<h2>Model Building &amp; Results<a class="headerlink" href="#model-building-results" title="Permalink to this heading">#</a></h2>
 <p>We built a simple regression model using the average difference of the plus minus between the home and away team and the outcome of the game. Using the train_test_split method from sk.learn we split the data set using at test size of 0.2 and a random state of 7. We used XGBoost as our machine learning library as our regularizing gradient boosting framework to use the decision trees to make the predictions. We then trained the model off the train and test data frames. To increase accuracy, we introduced some hyper parameters and used a uniform log distribution for our learning rate. After fitting our parameter to the model we then used the best parameters method to optimize and find our best parameters for the best possible accuracy using these two features. The results before introducing the hyper parameters concluded in an accuracy score of 57% after introducing the hyper parameterization we boosted our accuracy to about 60%. In conclusion, using win performance from the last 10 games and training our model over 3 seasons alone resulted in a 60 percent model accuracy while only using 2 features. Adding more features to this model could result in very accurate model considering the complexity and multiple factors that lead up into a basketball game.</p>
 </section>
 <section id="author-contributions">
-<h2>Author Contributions<a class="headerlink" href="#author-contributions" title="Permalink to this headline">#</a></h2>
+<h2>Author Contributions<a class="headerlink" href="#author-contributions" title="Permalink to this heading">#</a></h2>
 <p>Jiroum Masoudi was responsible for the data collection, cleaning, and feature engineering. Jiroum also authored in part the <a class="reference external" href="http://ReadMe.md">ReadMe.md</a> and main.ipynb, added the license, and designed and wrote the prediction model.</p>
+<p>Jennifer Liang developed utility functions found in the “tools” folder along with its tests to make sure that the utility functions worked properly. She was responsible for creating the JupyterBook and creating the Action workflow on GitHub to automatically update the JupyterBook. She also created the Makefile.txt and added the “Project Website” and “Repository Structure” on <a class="reference external" href="http://README.md">README.md</a>.</p>
 </section>
 </section>
 
@@ -882,16 +884,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "project"
         },
         kernelOptions: {
-            name: "python3",
+            name: "project",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'project'</script>
 
                 </article>
               
