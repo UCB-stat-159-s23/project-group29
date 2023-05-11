@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>NBA Dataset Analysis &#8212; NBA Basketball Predictive Analytics</title>
   
@@ -44,6 +44,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -66,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction" href="main.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -352,6 +353,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-website">Project Website</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
@@ -366,22 +368,37 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><a class="reference external" href="https://classroom.github.com/a/LiaEl886"><img alt="Review Assignment Due Date" src="https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg" /></a></p>
+  <p><a class="reference external" href="https://mybinder.org/v2/gh/UCB-stat-159-s23/project-group29.git/HEAD?labpath=main.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="nba-dataset-analysis">
-<h1>NBA Dataset Analysis<a class="headerlink" href="#nba-dataset-analysis" title="Permalink to this headline">#</a></h1>
+<h1>NBA Dataset Analysis<a class="headerlink" href="#nba-dataset-analysis" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>This project is analyzing NBA data that will then be used to build a regression model that will predict NBA Game winners using past performance. The scientific preface of this project is based on normal assumptions in sports, what factors like previous performance and home court advantage have an affect on winning and are we able to accurately predict NBA games won based on these dependencies? The analysis consists of data cleaning, exploratory data analysis, feature engineering and model building.</p>
 </section>
+<section id="project-website">
+<h2>Project Website<a class="headerlink" href="#project-website" title="Permalink to this heading">#</a></h2>
+<p>The website for this project can be found here [<a class="reference external" href="https://ucb-stat-159-s23.github.io/project-group29/main.html">https://ucb-stat-159-s23.github.io/project-group29/main.html</a>]</p>
+</section>
 <section id="dataset">
-<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">#</a></h2>
+<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">#</a></h2>
 <p>The data was collected using a known and popular API, NBA_API. The data is made available in the repository and all cleaned versions of the data set are available as well in the data folder.</p>
 </section>
 <section id="repository-structure">
-<h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">#</a></h2>
+<h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this heading">#</a></h2>
+<p>This repository is structured this way:</p>
+<ul class="simple">
+<li><p>data/: This folder has the raw and processed datasets used in the analysis.</p></li>
+<li><p>tools/: This folder contains <a class="reference external" href="http://utils.py">utils.py</a>, which are useful functions used in this repository. Inside it is the folder tests/ that hosts test_utils.py, which tests the functions we created</p></li>
+<li><p>Data Collection.ipynb: Contains the code that we used to gather the data used in this project.</p></li>
+<li><p>Data Cleaning Feature Engineering.ipynb: Here is all the data engineering and cleaning we did in order to obtain a dataset that is usable to build a linear regression model.</p></li>
+<li><p>main.ipynb: Contains a summary of all the analysis we made in this project</p></li>
+<li><p>prediction model.ipynb: Here is all the code and steps we took to build our linear regression model.</p></li>
+<li><p>environment.yml: This file contains all the packages and dependencies used in this project</p></li>
+<li><p>Makefile: this file contains all the information needed to build a JupyterBook.</p></li>
+</ul>
 </section>
 <section id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
 <p>This project is licensed under the BSD 3-Clause License.</p>
 </section>
 <div class="toctree-wrapper compound">
@@ -449,6 +466,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-website">Project Website</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
