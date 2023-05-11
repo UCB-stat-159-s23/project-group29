@@ -9,7 +9,7 @@ This project is analyzing NBA data that will then be used to build a regression 
 
 ## Project Website
 
-The website for this project can be found here [https://ucb-stat-159-s23.github.io/project-group29/main.html]
+The website for this project can be found here [https://ucb-stat-159-s23.github.io/project-group29/]
 
 ## Dataset
 
