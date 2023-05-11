@@ -9,7 +9,7 @@ This project is analyzing NBA data that will then be used to build a regression 
 
 ## Project Website
 
-The website for this project can be found [https://ucb-stat-159-s23.github.io/project-group29/main.html](here)
+The website for this project can be found here [https://ucb-stat-159-s23.github.io/project-group29/main.html]
 
 ## Dataset
 
@@ -32,6 +32,8 @@ This repository is structured this way:
 
 This project is licensed under the BSD 3-Clause License.
 
+
+https://mybinder.org/v2/gh/UCB-stat-159-s23/project-group29.git/HEAD?labpath=main.ipynb
 
 
 
