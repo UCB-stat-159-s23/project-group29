@@ -21,3 +21,4 @@ clean:
 	rm -f games/*.csv
 	rm -f games_model/*.csv
 	rm -rf _build/html/
+    
